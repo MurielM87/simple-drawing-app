@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Drawing App</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="pinceau.png" />
+</head>
+
+<body>
+    <div class="container">
+        <section class="tools_board">
+            <div class="row">
+                <label class="title">Shapes</label>
+                <ul class="options">
+                    <li class="option tool" id="rectangle">
+                        <img src="rect.svg" alt="rectangle">
+                        <span>Rectangle</span>
+                    </li>
+                    <li class="option tool" id="circle">
+                        <img src="circle.svg" alt="cirlce">
+                        <span>Circle</span>
+                    </li>
+                    <li class="option tool" id="triangle">
+                        <img src="triangle.svg" alt="triangle">
+                        <span>Triangle</span>
+                    </li>
+                    <li class="option tool" id="line">
+                        <img src="line.svg" alt="line">
+                        <span>Line</span>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="fill_color">
+                        <label for="fill_color">Fill color</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <label class="title">Options</label>
+                <ul class="options">
+                    <li class="option active tool" id="brush">
+                        <img src="brush.svg" alt="">
+                        <span>Brush</span>
+                    </li>
+                    <li class="option tool" id="eraser">
+                        <img src="eraser.svg" alt="">
+                        <span>Eraser</span>
+                    </li>
+                    <li class="option">
+                        <input type="range" id="size_slider" min="1" max="30" value="5">
+                    </li>
+                </ul>
+            </div>
+            <div class="row colors">
+                <label class="title">Colors</label>
+                <ul class="options">
+                    <li class="option selected"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option">
+                        <input type="color" name="color_picker" id="color_picker" value="#4A98F7">
+                    </li>
+                </ul>
+            </div>
+            <div class="row buttons">
+                <button class="clear_canvas">Clear Canvas</button>
+                <button class="save_img">Save as Image</button>
+            </div>
+        </section>
+        <section class="drawing_board">
+            <canvas></canvas>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
